@@ -3,6 +3,7 @@ const mongoose = require('mongoose')
 const routes = require('../routes/api');
 
 const routeNotFound = require('../middleware/routeNotFound');
+const validationError = require('../middleware/validationError');
 require('dotenv').config();
 
 //connect to mongodb
@@ -13,6 +14,8 @@ const app = express();
 app.use(express.json());
 
 app.use('/api', routes);
+
+app.use(validationError);
 
 //Middleware to handle requests which didnt end up in any of the routes in
 //route handler.
