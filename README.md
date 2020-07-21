@@ -2,19 +2,19 @@
 Full stack Travel Log application in Mern stack using Mapbox
 #TODO
  Setup Server
- Install Dependencies
- Install / Setup Linter
- Setup Express App
- Setup Not Found and Error Middlewares
- Model DB
+  Install Dependencies
+  Install / Setup Linter
+  Setup Express App
+  Setup Not Found and Error Middlewares
+  Model DB
 What data will we store?
- Setup Mongoose Model(s)
- POST /logs
+  Setup Mongoose Model(s)
+  POST /logs
 Create a new log entry
- GET / logs
+  GET / logs
 List all log entries
- Setup Client
- Create Form to add a new entry
- Setup Map SDK on client
- List all log entries on map
- DEPLOY!
+  Setup Client
+  Create Form to add a new entry
+  Setup Map SDK on client
+  List all log entries on map
+DEPLOY!
