@@ -1,9 +1,12 @@
 const express = require('express');
+const mongoose = require('mongoose')
 const routes = require('../routes/api');
-const routeNotFound = require('../middleware/routeNotFound');
 
+const routeNotFound = require('../middleware/routeNotFound');
 require('dotenv').config();
 
+//connect to mongodb
+mongoose.connect(process.env.DATABSE_URL);
 
 const app = express();
 
