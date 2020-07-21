@@ -9,3 +9,5 @@ router.get('/',(req,res)=>{
 router.post('/',(req,res)=>{
     res.send({'type' : 'POST'});
 })
+
+module.exports = router;
