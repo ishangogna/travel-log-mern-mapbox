@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 
-const LogEntry = ( { longitude, latitude } ) => {
+const LogEntry = ( { longitude, latitude, getLogs } ) => {
     
     const addLog = (e) => {
         e.preventDefault();
@@ -19,7 +19,7 @@ const LogEntry = ( { longitude, latitude } ) => {
             })
         })
         .then(response => response.json())
-        .then(data => console.log(data))
+        .then(getLogs(true))
         .catch(err=> console.log(err));
     
     }

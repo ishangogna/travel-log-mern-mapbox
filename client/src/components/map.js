@@ -31,6 +31,25 @@ class Map extends Component {
         });
   }
 
+  getLogs = (bool) => {
+    if (bool === true){
+        const url = 'http://localhost:2000/api';
+        fetch(url)
+        .then(response => response.json())
+        .then(logs => {
+            this.setState({
+                logs : logs,
+                newPopup : {
+                    longitude : 0
+                }
+            })
+
+        });
+    }
+    
+    
+}
+
   addNewLog = (e) => {
       const [ longitude, latitude ] = e.lngLat;
       this.setState({newPopup : {longitude, latitude}});
@@ -110,6 +129,7 @@ class Map extends Component {
                         <LogEntry 
                             longitude= {this.state.newPopup.longitude}
                             latitude = {this.state.newPopup.latitude}
+                            getLogs = {this.getLogs}
                             />
                     </div>
                 </Popup>
