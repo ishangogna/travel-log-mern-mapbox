@@ -8,7 +8,7 @@ const validationError = require('../middleware/validationError');
 require('dotenv').config();
 
 //connect to mongodb
-mongoose.connect(process.env.DATABSE_URL);
+mongoose.connect(process.env.DATABSE_URL,  { useNewUrlParser: true });
 
 const app = express();
 app.use(cors());

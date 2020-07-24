@@ -20,7 +20,7 @@ class Map extends Component {
   };
 
   componentDidMount = () => {
-      const url = 'http://localhost:2000/api';
+      const url = window.location.hostname === 'localhost' ? 'http://localhost:2000/api' : 'https://node-test.ishangogna.vercel.app/';
       fetch(url)
         .then(response => response.json())
         .then(logs => {
@@ -33,7 +33,7 @@ class Map extends Component {
 
   getLogs = (bool) => {
     if (bool === true){
-        const url = 'http://localhost:2000/api';
+        const url = window.location.hostname === 'localhost' ? 'http://localhost:2000/api' : 'https://node-test.ishangogna.vercel.app/';
         fetch(url)
         .then(response => response.json())
         .then(logs => {
